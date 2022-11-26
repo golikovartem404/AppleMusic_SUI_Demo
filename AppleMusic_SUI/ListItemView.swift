@@ -12,9 +12,10 @@ struct ListItemView: View {
     var title: String
     var icon: String
     var isSelected: Bool
+    var itemAction: () -> ()
 
     var body: some View {
-        Button(action: {}) {
+        Button(action: self.itemAction) {
             HStack {
                 Image(systemName: self.icon)
                     .resizable()
@@ -27,9 +28,3 @@ struct ListItemView: View {
         }
     }
 }
-
-//struct ListItemView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ListItemView()
-//    }
-//}
