@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TabBarView: View {
     var body: some View {
-        ZStack {
+        ZStack(alignment: .bottom) {
             TabView {
                 LibraryView()
                     .tabItem { Image(systemName: "music.note.house.fill")
@@ -31,6 +31,7 @@ struct TabBarView: View {
                 }
             }
             .accentColor(.red)
+            PlayerView()
         }
     }
 }
