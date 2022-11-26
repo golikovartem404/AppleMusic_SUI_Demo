@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct EditListView: View {
+
+    @State var listData = Model.data
+    @State var selectionItems: [String] = []
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(listData, id: \.title) { item in
+                ListItemView(title: item.title, icon: item.icon, isSelected: self.selectionItems.contains(item.title))
+            }
+        }
+        .accentColor(.red)
     }
 }
 
