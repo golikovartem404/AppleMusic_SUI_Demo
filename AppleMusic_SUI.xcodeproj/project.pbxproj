@@ -12,6 +12,8 @@
 		9CC096902932408F008EF388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CC0968F2932408F008EF388 /* Assets.xcassets */; };
 		9CC096932932408F008EF388 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CC096922932408F008EF388 /* Preview Assets.xcassets */; };
 		9CC0969A2932413E008EF388 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC096992932413E008EF388 /* LibraryView.swift */; };
+		9CC0969C2932428A008EF388 /* EditListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0969B2932428A008EF388 /* EditListView.swift */; };
+		9CC0969E293242E5008EF388 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0969D293242E5008EF388 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		9CC0968F2932408F008EF388 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CC096922932408F008EF388 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9CC096992932413E008EF388 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		9CC0969B2932428A008EF388 /* EditListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListView.swift; sourceTree = "<group>"; };
+		9CC0969D293242E5008EF388 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 			children = (
 				9CC0968B2932408F008EF388 /* AppleMusic_SUIApp.swift */,
 				9CC0968D2932408F008EF388 /* ContentView.swift */,
+				9CC0969B2932428A008EF388 /* EditListView.swift */,
+				9CC0969D293242E5008EF388 /* Model.swift */,
 				9CC096992932413E008EF388 /* LibraryView.swift */,
 				9CC0968F2932408F008EF388 /* Assets.xcassets */,
 				9CC096912932408F008EF388 /* Preview Content */,
@@ -140,8 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CC0969E293242E5008EF388 /* Model.swift in Sources */,
 				9CC0968E2932408F008EF388 /* ContentView.swift in Sources */,
 				9CC0969A2932413E008EF388 /* LibraryView.swift in Sources */,
+				9CC0969C2932428A008EF388 /* EditListView.swift in Sources */,
 				9CC0968C2932408F008EF388 /* AppleMusic_SUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
