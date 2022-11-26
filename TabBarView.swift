@@ -9,7 +9,29 @@ import SwiftUI
 
 struct TabBarView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            TabView {
+                LibraryView()
+                    .tabItem { Image(systemName: "music.note.house.fill")
+                        Text("Library")
+                    }
+                NavigationView {
+                    Text("Radio")
+                        .navigationTitle("Radio")
+                }
+                .tabItem { Image(systemName: "antenna.radiowaves.left.and.right")
+                    Text("Radio")
+                }
+                NavigationView {
+                    Text("Search")
+                        .navigationTitle("Search")
+                }
+                .tabItem { Image(systemName: "magnifyingglass")
+                    Text("Search")
+                }
+            }
+            .accentColor(.red)
+        }
     }
 }
 
