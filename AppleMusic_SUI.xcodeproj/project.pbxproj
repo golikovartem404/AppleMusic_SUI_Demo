@@ -68,6 +68,7 @@
 				9CC0969D293242E5008EF388 /* Model.swift */,
 				9CC0969F29324415008EF388 /* ListItemView.swift */,
 				9CC096992932413E008EF388 /* LibraryView.swift */,
+				9CC096A329324C90008EF388 /* TabBarView.swift */,
 				9CC0968F2932408F008EF388 /* Assets.xcassets */,
 				9CC096912932408F008EF388 /* Preview Content */,
 			);
