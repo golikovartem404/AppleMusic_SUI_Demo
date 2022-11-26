@@ -15,7 +15,13 @@ struct EditListView: View {
     var body: some View {
         List {
             ForEach(listData, id: \.title) { item in
-                ListItemView(title: item.title, icon: item.icon, isSelected: self.selectionItems.contains(item.title))
+                ListItemView(title: item.title, icon: item.icon, isSelected: selectionItems.contains(item.title)) {
+                    if self.selectionItems.contains(item.title) {
+                        self.selectionItems.removeAll(where: { item.title == $0 })
+                    } else {
+                        self.selectionItems.append(item.title)
+                    }
+                }
             }
         }
         .accentColor(.red)
