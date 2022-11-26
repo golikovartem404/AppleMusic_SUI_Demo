@@ -14,29 +14,29 @@ struct LibraryView: View {
     var body: some View {
         NavigationView {
             if self.showCommonLibraryView {
-                 CommonLibraryView()
-                     .navigationBarItems(trailing:
-                                             Button(action: {
-                         showCommonLibraryView.toggle()
-                     }, label: {
-                         Text(Constants.Strings.NavigationLinkText.edit)
-                             .foregroundColor(.pink)
-                         })
-                     )
-                     .navigationBarTitle(Constants.Strings.NavigationBarTitles.libraryTitle)
-             } else {
-                 EditListView()
-                     .navigationBarItems(trailing:
-                                             Button(action: {
-                         showCommonLibraryView.toggle()
-                     }, label: {
-                         Text(Constants.Strings.NavigationLinkText.done)
-                             .foregroundColor(.pink)
-                         })
-                     )
-                     .navigationBarTitle(Constants.Strings.NavigationBarTitles.libraryTitle)
-                     .navigationBarBackButtonHidden(true)
-             }
+                CommonLibraryView()
+                    .navigationBarItems(trailing:
+                                            Button(action: {
+                        showCommonLibraryView.toggle()
+                    }, label: {
+                        Text(Constants.Strings.NavigationLinkText.edit)
+                            .foregroundColor(.pink)
+                    })
+                    )
+                    .navigationBarTitle(Constants.Strings.NavigationBarTitles.libraryTitle)
+            } else {
+                EditListView()
+                    .navigationBarItems(trailing:
+                                            Button(action: {
+                        showCommonLibraryView.toggle()
+                    }, label: {
+                        Text(Constants.Strings.NavigationLinkText.done)
+                            .foregroundColor(.pink)
+                    })
+                    )
+                    .navigationBarTitle(Constants.Strings.NavigationBarTitles.libraryTitle)
+                    .navigationBarBackButtonHidden(true)
+            }
         }
     }
 }
