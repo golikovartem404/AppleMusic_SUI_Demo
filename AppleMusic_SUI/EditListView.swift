@@ -9,12 +9,14 @@ import SwiftUI
 
 struct EditListView: View {
 
+    @State var isEditMode = EditMode.active
     @State var listData = Model.data
     @State var selectionItems: [String] = []
+    @State var someItemSelection = Set<UUID>()
 
     var body: some View {
-        List {
-            ForEach(listData, id: \.title) { item in
+        List(selection: $someItemSelection) {
+            ForEach(listData, id: \.itemID) { item in
                 ListItemView(title: item.title, icon: item.icon, isSelected: selectionItems.contains(item.title)) {
                     if self.selectionItems.contains(item.title) {
                         self.selectionItems.removeAll(where: { item.title == $0 })
@@ -23,9 +25,15 @@ struct EditListView: View {
                     }
                 }
             }
+            .onMove(perform: moveItem)
         }
+        .environment(\.editMode, $isEditMode)
         .accentColor(.red)
     }
+
+    func moveItem(from sourcePosition: IndexSet, to destinationPosition: Int) {
+         self.listData.move(fromOffsets: sourcePosition, toOffset: destinationPosition)
+     }
 }
 
 struct EditListView_Previews: PreviewProvider {
