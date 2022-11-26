@@ -10,13 +10,17 @@ import SwiftUI
 struct CommonLibraryView: View {
     var body: some View {
         VStack {
-            Text("Search your music?")
-                .font(.system(size: 25, weight: .bold, design: .default))
-            Text("All your music which you buy in iTunes Store stores here")
+            Text(Constants.Strings.LibraryText.title)
+                .font(.system(
+                    size: Constants.FontSize.commonLibraryTitleFontSize,
+                    weight: .bold,
+                    design: .default)
+                )
+            Text(Constants.Strings.LibraryText.subtitle)
                 .font(.subheadline)
                 .foregroundColor(.gray)
         }
-        .frame(width: 250)
+        .frame(width: Constants.Frames.commonLibraryViewWidth)
         .multilineTextAlignment(.center)
     }
 }

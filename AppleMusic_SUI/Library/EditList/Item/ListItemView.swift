@@ -19,12 +19,19 @@ struct ListItemView: View {
             HStack {
                 Image(systemName: self.icon)
                     .resizable()
-                    .frame(width: 20, height: 20)
+                    .frame(
+                        width: Constants.Frames.listItemViewImageWidth,
+                        height: Constants.Frames.listItemViewImageHeight
+                    )
                     .foregroundColor(.red)
                 Text(self.title)
-                    .font(.system(size: 18, weight: .regular, design: .default))
+                    .font(.system(
+                        size: Constants.FontSize.listItemTextFontSize,
+                        weight: .regular,
+                        design: .default)
+                    )
             }
-            .frame(height: 40)
+            .frame(height: Constants.Frames.listItemHeight)
         }
     }
 }
