@@ -28,7 +28,7 @@ struct EditListView: View {
             .onMove(perform: moveItem)
         }
         .environment(\.editMode, $isEditMode)
-        .accentColor(.red)
+        .listStyle(PlainListStyle())
     }
 
     func moveItem(from sourcePosition: IndexSet, to destinationPosition: Int) {
