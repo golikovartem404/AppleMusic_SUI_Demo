@@ -32,7 +32,10 @@ struct EditListView: View {
     }
 
     func moveItem(from sourcePosition: IndexSet, to destinationPosition: Int) {
-         self.listData.move(fromOffsets: sourcePosition, toOffset: destinationPosition)
+         self.listData.move(
+            fromOffsets: sourcePosition,
+            toOffset: destinationPosition
+         )
      }
 }
 

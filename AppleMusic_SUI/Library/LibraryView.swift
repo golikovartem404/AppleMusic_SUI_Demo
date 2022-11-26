@@ -19,22 +19,22 @@ struct LibraryView: View {
                                              Button(action: {
                          showCommonLibraryView.toggle()
                      }, label: {
-                         Text("Edit")
+                         Text(Constants.Strings.NavigationLinkText.edit)
                              .foregroundColor(.pink)
                          })
                      )
-                     .navigationBarTitle("Library")
+                     .navigationBarTitle(Constants.Strings.NavigationBarTitles.libraryTitle)
              } else {
                  EditListView()
                      .navigationBarItems(trailing:
                                              Button(action: {
                          showCommonLibraryView.toggle()
                      }, label: {
-                         Text("Done")
+                         Text(Constants.Strings.NavigationLinkText.done)
                              .foregroundColor(.pink)
                          })
                      )
-                     .navigationBarTitle("Library")
+                     .navigationBarTitle(Constants.Strings.NavigationBarTitles.libraryTitle)
                      .navigationBarBackButtonHidden(true)
              }
         }
