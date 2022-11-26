@@ -16,6 +16,7 @@
 		9CC0969E293242E5008EF388 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0969D293242E5008EF388 /* Model.swift */; };
 		9CC096A029324415008EF388 /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0969F29324415008EF388 /* ListItemView.swift */; };
 		9CC096A22932499B008EF388 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC096A12932499B008EF388 /* PlayerView.swift */; };
+		9CC096A629324F8D008EF388 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC096A529324F8D008EF388 /* TabBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		9CC0969D293242E5008EF388 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9CC0969F29324415008EF388 /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
 		9CC096A12932499B008EF388 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		9CC096A529324F8D008EF388 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarView.swift; path = ../TabBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +65,12 @@
 			children = (
 				9CC0968B2932408F008EF388 /* AppleMusic_SUIApp.swift */,
 				9CC0968D2932408F008EF388 /* ContentView.swift */,
+				9CC096A529324F8D008EF388 /* TabBarView.swift */,
 				9CC0969B2932428A008EF388 /* EditListView.swift */,
 				9CC096A12932499B008EF388 /* PlayerView.swift */,
 				9CC0969D293242E5008EF388 /* Model.swift */,
 				9CC0969F29324415008EF388 /* ListItemView.swift */,
 				9CC096992932413E008EF388 /* LibraryView.swift */,
-				9CC096A329324C90008EF388 /* TabBarView.swift */,
 				9CC0968F2932408F008EF388 /* Assets.xcassets */,
 				9CC096912932408F008EF388 /* Preview Content */,
 			);
@@ -155,6 +157,7 @@
 			files = (
 				9CC0969E293242E5008EF388 /* Model.swift in Sources */,
 				9CC0968E2932408F008EF388 /* ContentView.swift in Sources */,
+				9CC096A629324F8D008EF388 /* TabBarView.swift in Sources */,
 				9CC096A22932499B008EF388 /* PlayerView.swift in Sources */,
 				9CC0969A2932413E008EF388 /* LibraryView.swift in Sources */,
 				9CC096A029324415008EF388 /* ListItemView.swift in Sources */,
