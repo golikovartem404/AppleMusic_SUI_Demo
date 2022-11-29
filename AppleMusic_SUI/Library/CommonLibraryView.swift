@@ -16,6 +16,7 @@ struct CommonLibraryView: View {
                     weight: .bold,
                     design: .default)
                 )
+            
             Text(Constants.Strings.LibraryText.subtitle)
                 .font(.subheadline)
                 .foregroundColor(.gray)

@@ -20,15 +20,19 @@ struct PlayerView: View {
                 .clipped()
                 .cornerRadius(8)
                 .padding(.leading, Constants.Paddings.playerImageLeading)
+
             Text(Constants.Strings.PlayerText.songName)
                 .padding(.leading, Constants.Paddings.playerTextLeading)
                 .padding(.trailing, Constants.Paddings.playerTextTrailing)
+
             Spacer()
+
             HStack {
                 Button(action: {}) {
                     Image(systemName: Constants.Strings.PlayerText.playButtonImageName)
                         .padding(.trailing, Constants.Paddings.playButtonTrailing)
                 }
+                
                 Button(action: {}) {
                     Image(systemName: Constants.Strings.PlayerText.forwardButtonImageName)
                         .padding(.trailing, Constants.Paddings.forwardButtonTrailing)

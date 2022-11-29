@@ -8,16 +8,14 @@
 import SwiftUI
 
 struct LibraryView: View {
-
-    @State var showCommonLibraryView = true
+    @State var editingListIsHidden = true
 
     var body: some View {
         NavigationView {
-            if self.showCommonLibraryView {
+            if self.editingListIsHidden {
                 CommonLibraryView()
-                    .navigationBarItems(trailing:
-                                            Button(action: {
-                        showCommonLibraryView.toggle()
+                    .navigationBarItems(trailing: Button(action: {
+                        editingListIsHidden.toggle()
                     }, label: {
                         Text(Constants.Strings.NavigationLinkText.edit)
                             .foregroundColor(.pink)
@@ -26,9 +24,8 @@ struct LibraryView: View {
                     .navigationBarTitle(Constants.Strings.NavigationBarTitles.libraryTitle)
             } else {
                 EditListView()
-                    .navigationBarItems(trailing:
-                                            Button(action: {
-                        showCommonLibraryView.toggle()
+                    .navigationBarItems(trailing: Button(action: {
+                        editingListIsHidden.toggle()
                     }, label: {
                         Text(Constants.Strings.NavigationLinkText.done)
                             .foregroundColor(.pink)
