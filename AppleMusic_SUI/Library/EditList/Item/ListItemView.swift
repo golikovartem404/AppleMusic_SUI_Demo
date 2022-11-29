@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ListItemView: View {
-
     var title: String
     var icon: String
     var isSelected: Bool
@@ -24,6 +23,7 @@ struct ListItemView: View {
                         height: Constants.Frames.listItemViewImageHeight
                     )
                     .foregroundColor(.red)
+                
                 Text(self.title)
                     .font(.system(
                         size: Constants.FontSize.listItemTextFontSize,

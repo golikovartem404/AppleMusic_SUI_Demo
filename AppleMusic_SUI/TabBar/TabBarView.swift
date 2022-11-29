@@ -16,6 +16,7 @@ struct TabBarView: View {
                         Image(systemName: Constants.Strings.TabBarTabs.libraryTabImageName)
                         Text(Constants.Strings.TabBarTabs.libraryTabTitle)
                     }
+
                 NavigationView {
                     Text(Constants.Strings.TabBarTabs.radioTabTitle)
                         .navigationTitle(Constants.Strings.NavigationBarTitles.radioTitle)
@@ -24,6 +25,7 @@ struct TabBarView: View {
                     Image(systemName: Constants.Strings.TabBarTabs.radioTabImageName)
                     Text(Constants.Strings.TabBarTabs.radioTabTitle)
                 }
+
                 NavigationView {
                     Text(Constants.Strings.TabBarTabs.searchTabTitle)
                         .navigationTitle(Constants.Strings.NavigationBarTitles.searchTitle)
@@ -34,6 +36,7 @@ struct TabBarView: View {
                 }
             }
             .accentColor(.red)
+            
             PlayerView()
         }
     }
