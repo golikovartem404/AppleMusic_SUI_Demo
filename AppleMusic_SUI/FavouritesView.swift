@@ -11,12 +11,12 @@ struct FavouritesView: View {
     @State var items = RadioModel.favoritesData
 
      let rows: [GridItem] = [
-         GridItem(.fixed(275))
+         GridItem(.flexible())
      ]
 
      var body: some View {
+         Divider()
          ScrollView(.horizontal, showsIndicators: false) {
-             Divider()
              LazyHGrid(rows: rows) {
                  ForEach(items, id: \.id) { item in
                      FavoritesItem(
@@ -26,10 +26,10 @@ struct FavouritesView: View {
                      )
                  }
              }
-             .padding(.leading, 16)
+             .padding(.horizontal, 16)
              .padding(.bottom, 16)
-             Divider()
          }
+         Divider()
      }
 }
 

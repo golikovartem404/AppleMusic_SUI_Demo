@@ -17,10 +17,7 @@ struct TabBarView: View {
                         Text(Constants.Strings.TabBarTabs.libraryTabTitle)
                     }
 
-                NavigationView {
-                    Text(Constants.Strings.TabBarTabs.radioTabTitle)
-                        .navigationTitle(Constants.Strings.NavigationBarTitles.radioTitle)
-                }
+                RadioView()
                 .tabItem {
                     Image(systemName: Constants.Strings.TabBarTabs.radioTabImageName)
                     Text(Constants.Strings.TabBarTabs.radioTabTitle)
