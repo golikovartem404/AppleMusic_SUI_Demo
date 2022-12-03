@@ -16,6 +16,14 @@ enum Constants {
         static let playerTextTrailing: CGFloat = 15
         static let playButtonTrailing: CGFloat = 10
         static let forwardButtonTrailing: CGFloat = 20
+
+        static let favoriteItemHorizontal: CGFloat = 16
+        static let favoriteItemBottom: CGFloat = 16
+
+        static let stationItemVStackLeading: CGFloat = 12
+
+        static let stationsLazyVGridLeading: CGFloat = 16
+        static let stationsLazyVGridTrailing: CGFloat = 16
     }
 
     enum Frames {
@@ -28,11 +36,22 @@ enum Constants {
         static let playerImageWidth: CGFloat = 50
         static let playerImageHeight: CGFloat = 50
         static let playerViewHeight: CGFloat = 80
+
+        static let favoriteItemImageWidth: CGFloat = UIScreen.main.bounds.size.width * 0.9
+        static let favoriteItemVStackHeight: CGFloat = UIScreen.main.bounds.size.height * 0.4
+
+        static let stationItemImageWidth: CGFloat = 100
+        static let stationItemImageHeight: CGFloat = 100
     }
 
     enum FontSize {
         static let listItemTextFontSize: CGFloat = 18
         static let commonLibraryTitleFontSize: CGFloat = 25
+
+        static let radioStationItemSubtitle: CGFloat = 16
+        static let radioStationItemTitle: CGFloat = 20
+
+        static let stationsSectionHeader: CGFloat = 24
     }
 
     enum Strings {
@@ -69,6 +88,10 @@ enum Constants {
 
             static let searchTabTitle = "Search"
             static let searchTabImageName = "magnifyingglass"
+        }
+
+        enum SectionHeaders {
+            static let stationsHeader = "Stations"
         }
     }
 }

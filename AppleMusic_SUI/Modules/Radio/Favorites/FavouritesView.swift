@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FavouritesView: View {
-    @State var items = RadioModel.favoritesData
+    @State var items = RadioModel.favoritesStations
 
      let rows: [GridItem] = [
          GridItem(.flexible())
@@ -16,6 +16,7 @@ struct FavouritesView: View {
 
      var body: some View {
          Divider()
+
          ScrollView(.horizontal, showsIndicators: false) {
              LazyHGrid(rows: rows) {
                  ForEach(items, id: \.id) { item in
@@ -26,9 +27,10 @@ struct FavouritesView: View {
                      )
                  }
              }
-             .padding(.horizontal, 16)
-             .padding(.bottom, 16)
+             .padding(.horizontal, Constants.Paddings.favoriteItemHorizontal)
+             .padding(.bottom, Constants.Paddings.favoriteItemBottom)
          }
+         
          Divider()
      }
 }

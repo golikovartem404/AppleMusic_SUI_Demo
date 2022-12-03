@@ -15,19 +15,19 @@ struct FavoritesItem: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(category ?? "")
-                .font(.system(size: 20))
+                .font(.system(size: Constants.FontSize.radioStationItemSubtitle))
                 .foregroundColor(.gray)
 
             Text(title)
-                .font(.system(size: 20, weight: .bold))
+                .font(.system(size: Constants.FontSize.radioStationItemTitle, weight: .bold))
             
             Image(image)
                 .resizable()
                 .scaledToFill()
                 .clipped()
-                .frame(width: UIScreen.main.bounds.size.width * 0.9)
+                .frame(width: Constants.Frames.favoriteItemImageWidth)
                 .cornerRadius(10)
         }
-        .frame(height: UIScreen.main.bounds.size.height * 0.4)
+        .frame(height: Constants.Frames.favoriteItemVStackHeight)
     }
 }

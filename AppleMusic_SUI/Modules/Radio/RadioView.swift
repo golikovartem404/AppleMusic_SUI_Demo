@@ -14,7 +14,7 @@ struct RadioView: View {
                 FavouritesView()
                 StationsView()
             }
-            .navigationBarTitle("Radio")
+            .navigationBarTitle(Constants.Strings.NavigationBarTitles.radioTitle)
         }
     }
 }

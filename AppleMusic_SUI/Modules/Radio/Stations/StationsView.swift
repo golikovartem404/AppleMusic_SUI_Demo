@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StationsView: View {
-    @State var items = RadioModel.stationsData
+    @State var items = RadioModel.stations
 
      let columns: [GridItem] = [
          GridItem(.flexible(), spacing: 5)
@@ -19,18 +19,27 @@ struct StationsView: View {
             LazyVGrid(columns: columns) {
                 Section {
                     ForEach(items, id: \.id) { item in
-                         StationsItem(image: item.image, title: item.title, description: item.description ?? "")
+                         StationsItem(
+                            image: item.image,
+                            title: item.title,
+                            description: item.description ?? ""
+                         )
+
                          Divider()
                      }
                 } header: {
-                    Text("Stations")
-                        .font(.system(size: 24, weight: .bold, design: .default))
+                    Text(Constants.Strings.SectionHeaders.stationsHeader)
+                        .font(.system(
+                            size: Constants.FontSize.stationsSectionHeader,
+                            weight: .bold,
+                            design: .default)
+                        )
                         .fontWeight(.bold)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
             }
-            .padding(.leading, 16)
-            .padding(.trailing, 16)
+            .padding(.leading, Constants.Paddings.stationsLazyVGridLeading)
+            .padding(.trailing, Constants.Paddings.stationsLazyVGridTrailing)
         }
     }
 }

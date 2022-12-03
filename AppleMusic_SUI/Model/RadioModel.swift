@@ -17,14 +17,14 @@ struct RadioModel: Identifiable {
 
 extension RadioModel {
 
-    static let favoritesData = [
+    static let favoritesStations = [
         RadioModel(image: "nrj", title: "EnergyFM", category: "New Episode"),
         RadioModel(image: "russianRadio", title: "Russian Radio", category: "Favorite Station"),
         RadioModel(image: "retroFM", title: "Retro FM", category: "Favorite Station"),
         RadioModel(image: "europaPlus", title: "Europa Plus", category: "New Episode")
     ]
 
-    static let stationsData = [
+    static let stations = [
         RadioModel(image: "monte-carlo", title: "Monte-Carlo", description: "Set yourself up for rich"),
         RadioModel(image: "russianHit", title: "Russian Hit", description: "Listening now"),
         RadioModel(image: "freedom", title: "Freedom FM Radio", description: "Music for free thinking"),
