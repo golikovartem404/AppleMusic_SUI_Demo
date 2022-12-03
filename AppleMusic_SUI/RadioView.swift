@@ -12,8 +12,9 @@ struct RadioView: View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
                 FavouritesView()
+                StationsView()
             }
-                .navigationBarTitle("Radio")
+            .navigationBarTitle("Radio")
         }
     }
 }
