@@ -41,7 +41,7 @@ struct PlayerView: View {
             .foregroundColor(.black)
         }
         .frame(height: Constants.Frames.playerViewHeight)
-        .background(Color.init(.systemGray6))
+        .background(Color.init(.systemGray6).opacity(0.95))
         .offset(y: -49)
     }
 }

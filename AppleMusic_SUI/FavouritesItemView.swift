@@ -23,8 +23,11 @@ struct FavoritesItem: View {
             
             Image(image)
                 .resizable()
-                .scaledToFit()
+                .scaledToFill()
+                .clipped()
+                .frame(width: UIScreen.main.bounds.size.width * 0.9)
                 .cornerRadius(10)
         }
+        .frame(height: UIScreen.main.bounds.size.height * 0.4)
     }
 }
