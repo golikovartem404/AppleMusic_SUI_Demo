@@ -18,16 +18,18 @@ struct RadioModel: Identifiable {
 extension RadioModel {
 
     static let favoritesData = [
-        RadioModel(image: "nrj", title: "EnergyFM", category: "Новый выпуск"),
-        RadioModel(image: "russianRadio", title: "Русское радио", category: "Избранная радиостанция"),
-        RadioModel(image: "retroFM", title: "Ретро FM", category: "Избранная радиостанция"),
-        RadioModel(image: "europaPlus", title: "Europa Plus", category: "Новый выпуск")
+        RadioModel(image: "nrj", title: "EnergyFM", category: "New Episode"),
+        RadioModel(image: "russianRadio", title: "Russian Radio", category: "Favorite Station"),
+        RadioModel(image: "retroFM", title: "Retro FM", category: "Favorite Station"),
+        RadioModel(image: "europaPlus", title: "Europa Plus", category: "New Episode")
     ]
 
     static let stationsData = [
-        RadioModel(image: "monte-carlo", title: "Monte-Carlo", description: "Настройся на богатые мысли"),
-        RadioModel(image: "russianHit", title: "Русский Хит", description: "Слушают сейчас"),
-        RadioModel(image: "freedom", title: "Радио Свобода FM", description: "Музыка для свободного мышления"),
-        RadioModel(image: "relaxFM", title: "Relax FM", description: "Музыка для расслабления")
+        RadioModel(image: "monte-carlo", title: "Monte-Carlo", description: "Set yourself up for rich"),
+        RadioModel(image: "russianHit", title: "Russian Hit", description: "Listening now"),
+        RadioModel(image: "freedom", title: "Freedom FM Radio", description: "Music for free thinking"),
+        RadioModel(image: "relaxFM", title: "Relax FM", description: "Music for relax"),
+        RadioModel(image: "retroFM", title: "Retro FM", description: "The best hits"),
+        RadioModel(image: "russianRadio", title: "Russian Radio", description: "Only russian music")
     ]
 }

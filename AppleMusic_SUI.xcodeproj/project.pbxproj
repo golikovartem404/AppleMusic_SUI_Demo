@@ -11,6 +11,8 @@
 		9CB263E8293B8CC30060A487 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB263E7293B8CC30060A487 /* FavouritesView.swift */; };
 		9CB263EA293B8CD40060A487 /* FavouritesItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB263E9293B8CD40060A487 /* FavouritesItemView.swift */; };
 		9CB263EC293B8DAC0060A487 /* RadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB263EB293B8DAC0060A487 /* RadioView.swift */; };
+		9CB263EE293B8FAC0060A487 /* StationsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB263ED293B8FAC0060A487 /* StationsItemView.swift */; };
+		9CB263F0293B8FB20060A487 /* StationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB263EF293B8FB20060A487 /* StationsView.swift */; };
 		9CC0968C2932408F008EF388 /* AppleMusic_SUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0968B2932408F008EF388 /* AppleMusic_SUIApp.swift */; };
 		9CC0968E2932408F008EF388 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0968D2932408F008EF388 /* ContentView.swift */; };
 		9CC096902932408F008EF388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CC0968F2932408F008EF388 /* Assets.xcassets */; };
@@ -30,6 +32,8 @@
 		9CB263E7293B8CC30060A487 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
 		9CB263E9293B8CD40060A487 /* FavouritesItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesItemView.swift; sourceTree = "<group>"; };
 		9CB263EB293B8DAC0060A487 /* RadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioView.swift; sourceTree = "<group>"; };
+		9CB263ED293B8FAC0060A487 /* StationsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsItemView.swift; sourceTree = "<group>"; };
+		9CB263EF293B8FB20060A487 /* StationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsView.swift; sourceTree = "<group>"; };
 		9CC096882932408F008EF388 /* AppleMusic_SUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleMusic_SUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC0968B2932408F008EF388 /* AppleMusic_SUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusic_SUIApp.swift; sourceTree = "<group>"; };
 		9CC0968D2932408F008EF388 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 				9CC096AE29325536008EF388 /* Model */,
 				9CC0968F2932408F008EF388 /* Assets.xcassets */,
 				9CB263EB293B8DAC0060A487 /* RadioView.swift */,
+				9CB263ED293B8FAC0060A487 /* StationsItemView.swift */,
+				9CB263EF293B8FB20060A487 /* StationsView.swift */,
 				9CB263E7293B8CC30060A487 /* FavouritesView.swift */,
 				9CB263E9293B8CD40060A487 /* FavouritesItemView.swift */,
 				9CC096912932408F008EF388 /* Preview Content */,
@@ -256,7 +262,9 @@
 				9CB263EC293B8DAC0060A487 /* RadioView.swift in Sources */,
 				9CC096A029324415008EF388 /* ListItemView.swift in Sources */,
 				9CC0969C2932428A008EF388 /* EditListView.swift in Sources */,
+				9CB263EE293B8FAC0060A487 /* StationsItemView.swift in Sources */,
 				9CB263E8293B8CC30060A487 /* FavouritesView.swift in Sources */,
+				9CB263F0293B8FB20060A487 /* StationsView.swift in Sources */,
 				9CB263EA293B8CD40060A487 /* FavouritesItemView.swift in Sources */,
 				9CC0968C2932408F008EF388 /* AppleMusic_SUIApp.swift in Sources */,
 			);
