@@ -14,21 +14,24 @@ struct StationsItem: View {
 
     var body: some View {
         HStack {
-            Image(self.image)
+            Image(image)
                 .resizable()
-                .frame(width: 100, height: 100)
+                .frame(
+                    width: Constants.Frames.stationItemImageWidth,
+                    height: Constants.Frames.stationItemImageHeight
+                )
                 .scaledToFill()
                 .cornerRadius(5)
 
             VStack(alignment: .leading) {
-                Text(self.title)
-                    .font(.system(size: 20, weight: .bold))
+                Text(title)
+                    .font(.title2)
 
-                Text(self.description)
-                    .font(.system(size: 20))
+                Text(description)
+                    .font(.system(size: Constants.FontSize.radioStationItemSubtitle))
                     .foregroundColor(.gray)
             }
-            .padding(.leading, 12)
+            .padding(.leading, Constants.Paddings.stationItemVStackLeading)
 
             Spacer()
         }

@@ -60,6 +60,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9CB263F1293B99F40060A487 /* Radio */ = {
+			isa = PBXGroup;
+			children = (
+				9CB263EB293B8DAC0060A487 /* RadioView.swift */,
+				9CB263F3293B9A020060A487 /* Favorites */,
+				9CB263F2293B99FD0060A487 /* Stations */,
+			);
+			path = Radio;
+			sourceTree = "<group>";
+		};
+		9CB263F2293B99FD0060A487 /* Stations */ = {
+			isa = PBXGroup;
+			children = (
+				9CB263ED293B8FAC0060A487 /* StationsItemView.swift */,
+				9CB263EF293B8FB20060A487 /* StationsView.swift */,
+			);
+			path = Stations;
+			sourceTree = "<group>";
+		};
+		9CB263F3293B9A020060A487 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				9CB263E9293B8CD40060A487 /* FavouritesItemView.swift */,
+				9CB263E7293B8CC30060A487 /* FavouritesView.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		9CB263F4293B9A180060A487 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9CC096A9293254E4008EF388 /* Library */,
+				9CB263F1293B99F40060A487 /* Radio */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		9CC0967F2932408F008EF388 = {
 			isa = PBXGroup;
 			children = (
@@ -79,19 +116,14 @@
 		9CC0968A2932408F008EF388 /* AppleMusic_SUI */ = {
 			isa = PBXGroup;
 			children = (
+				9CB263F4293B9A180060A487 /* Modules */,
 				9CC096B129325596008EF388 /* Constants */,
 				9CC096B029325555008EF388 /* App */,
 				9CC096AF2932554E008EF388 /* Content */,
-				9CC096A9293254E4008EF388 /* Library */,
 				9CC096AC29325524008EF388 /* Player */,
 				9CC096AD2932552B008EF388 /* TabBar */,
 				9CC096AE29325536008EF388 /* Model */,
 				9CC0968F2932408F008EF388 /* Assets.xcassets */,
-				9CB263EB293B8DAC0060A487 /* RadioView.swift */,
-				9CB263ED293B8FAC0060A487 /* StationsItemView.swift */,
-				9CB263EF293B8FB20060A487 /* StationsView.swift */,
-				9CB263E7293B8CC30060A487 /* FavouritesView.swift */,
-				9CB263E9293B8CD40060A487 /* FavouritesItemView.swift */,
 				9CC096912932408F008EF388 /* Preview Content */,
 			);
 			path = AppleMusic_SUI;
