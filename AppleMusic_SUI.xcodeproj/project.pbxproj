@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9CB263E6293B8A180060A487 /* RadioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB263E5293B8A180060A487 /* RadioModel.swift */; };
 		9CC0968C2932408F008EF388 /* AppleMusic_SUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0968B2932408F008EF388 /* AppleMusic_SUIApp.swift */; };
 		9CC0968E2932408F008EF388 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0968D2932408F008EF388 /* ContentView.swift */; };
 		9CC096902932408F008EF388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CC0968F2932408F008EF388 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9CB263E5293B8A180060A487 /* RadioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioModel.swift; sourceTree = "<group>"; };
 		9CC096882932408F008EF388 /* AppleMusic_SUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleMusic_SUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC0968B2932408F008EF388 /* AppleMusic_SUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusic_SUIApp.swift; sourceTree = "<group>"; };
 		9CC0968D2932408F008EF388 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				9CC0969D293242E5008EF388 /* Model.swift */,
+				9CB263E5293B8A180060A487 /* RadioModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			files = (
 				9CC0969E293242E5008EF388 /* Model.swift in Sources */,
 				9CC0968E2932408F008EF388 /* ContentView.swift in Sources */,
+				9CB263E6293B8A180060A487 /* RadioModel.swift in Sources */,
 				9CC096A629324F8D008EF388 /* TabBarView.swift in Sources */,
 				9CC096A8293250D3008EF388 /* CommonLibraryView.swift in Sources */,
 				9CC096A22932499B008EF388 /* PlayerView.swift in Sources */,
