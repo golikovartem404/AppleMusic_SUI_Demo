@@ -21,10 +21,11 @@
 		9CC0969C2932428A008EF388 /* EditListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0969B2932428A008EF388 /* EditListView.swift */; };
 		9CC0969E293242E5008EF388 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0969D293242E5008EF388 /* Model.swift */; };
 		9CC096A029324415008EF388 /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0969F29324415008EF388 /* ListItemView.swift */; };
-		9CC096A22932499B008EF388 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC096A12932499B008EF388 /* PlayerView.swift */; };
+		9CC096A22932499B008EF388 /* MiniPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC096A12932499B008EF388 /* MiniPlayerView.swift */; };
 		9CC096A629324F8D008EF388 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC096A529324F8D008EF388 /* TabBarView.swift */; };
 		9CC096A8293250D3008EF388 /* CommonLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC096A7293250D3008EF388 /* CommonLibraryView.swift */; };
 		9CC096B3293255A2008EF388 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC096B2293255A2008EF388 /* Constants.swift */; };
+		9CFCE6752943261400CD0CDC /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFCE6742943261400CD0CDC /* PlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,10 +44,11 @@
 		9CC0969B2932428A008EF388 /* EditListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListView.swift; sourceTree = "<group>"; };
 		9CC0969D293242E5008EF388 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9CC0969F29324415008EF388 /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
-		9CC096A12932499B008EF388 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		9CC096A12932499B008EF388 /* MiniPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniPlayerView.swift; sourceTree = "<group>"; };
 		9CC096A529324F8D008EF388 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		9CC096A7293250D3008EF388 /* CommonLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonLibraryView.swift; sourceTree = "<group>"; };
 		9CC096B2293255A2008EF388 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9CFCE6742943261400CD0CDC /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		9CB263F4293B9A180060A487 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9CC096AC29325524008EF388 /* Player */,
 				9CC096A9293254E4008EF388 /* Library */,
 				9CB263F1293B99F40060A487 /* Radio */,
 			);
@@ -120,7 +123,6 @@
 				9CC096B129325596008EF388 /* Constants */,
 				9CC096B029325555008EF388 /* App */,
 				9CC096AF2932554E008EF388 /* Content */,
-				9CC096AC29325524008EF388 /* Player */,
 				9CC096AD2932552B008EF388 /* TabBar */,
 				9CC096AE29325536008EF388 /* Model */,
 				9CC0968F2932408F008EF388 /* Assets.xcassets */,
@@ -167,7 +169,8 @@
 		9CC096AC29325524008EF388 /* Player */ = {
 			isa = PBXGroup;
 			children = (
-				9CC096A12932499B008EF388 /* PlayerView.swift */,
+				9CC096A12932499B008EF388 /* MiniPlayerView.swift */,
+				9CFCE6742943261400CD0CDC /* PlayerView.swift */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -287,8 +290,9 @@
 				9CC0968E2932408F008EF388 /* ContentView.swift in Sources */,
 				9CB263E6293B8A180060A487 /* RadioModel.swift in Sources */,
 				9CC096A629324F8D008EF388 /* TabBarView.swift in Sources */,
+				9CFCE6752943261400CD0CDC /* PlayerView.swift in Sources */,
 				9CC096A8293250D3008EF388 /* CommonLibraryView.swift in Sources */,
-				9CC096A22932499B008EF388 /* PlayerView.swift in Sources */,
+				9CC096A22932499B008EF388 /* MiniPlayerView.swift in Sources */,
 				9CC096B3293255A2008EF388 /* Constants.swift in Sources */,
 				9CC0969A2932413E008EF388 /* LibraryView.swift in Sources */,
 				9CB263EC293B8DAC0060A487 /* RadioView.swift in Sources */,

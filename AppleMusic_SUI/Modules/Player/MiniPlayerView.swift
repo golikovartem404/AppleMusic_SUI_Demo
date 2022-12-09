@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct PlayerView: View {
+struct MiniPlayerView: View {
+    @State private var showingPlayer = false
+
     var body: some View {
         HStack {
             Image(Constants.Strings.PlayerText.albumImageName)
@@ -39,15 +41,20 @@ struct PlayerView: View {
                 }
             }
             .foregroundColor(.black)
+            .font(.system(size: 25))
         }
         .frame(height: Constants.Frames.playerViewHeight)
         .background(Color.init(.systemGray6).opacity(0.95))
         .offset(y: -49)
+        .onTapGesture(count: 2, perform: {
+             showingPlayer.toggle()
+         })
+         .fullScreenCover(isPresented: $showingPlayer, content: PlayerView.init)
     }
 }
 
-struct PlayerView_Previews: PreviewProvider {
+struct MiniPlayerView_Previews: PreviewProvider {
     static var previews: some View {
-        PlayerView()
+        MiniPlayerView()
     }
 }
