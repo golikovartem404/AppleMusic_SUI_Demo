@@ -36,17 +36,22 @@ struct SearchView: View {
                 ScrollView {
                     LazyVGrid(columns: columns) {
                         Section {
-                            ForEach(categories, id: \.id) { item in
-                                CategoryItemView(categoryImage: item.categoryImage, categoryTitle: item.categoryTitle)
+                            ForEach(categories, id: \.id) { category in
+                                NavigationLink(destination: DetailCategoryView()) {
+                                    CategoryItemView(
+                                        categoryImage: category.categoryImage,
+                                        categoryTitle: category.categoryTitle
+                                    )
+                                }
                             }
                         } header: {
                             Text("Search by category")
                                 .font(.system(size: 23, weight: .black, design: .default))
-                                 .fontWeight(.bold)
-                                 .frame(maxWidth: .infinity, alignment: .leading)
-                                 .padding(.top, 10)
+                                .fontWeight(.bold)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.top, 10)
                         }
-
+                        
                     }
                 }
                 .padding([.leading, .trailing], 12)
