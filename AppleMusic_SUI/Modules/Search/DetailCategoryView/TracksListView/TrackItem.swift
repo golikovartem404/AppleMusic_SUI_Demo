@@ -12,7 +12,7 @@ struct TrackItem: View {
     var title: String
     var artist: String
     var description: String
-
+    
     var body: some View {
         VStack(alignment: .leading) {
             Image(self.image)
@@ -20,12 +20,12 @@ struct TrackItem: View {
                 .frame(width: 185, height: 185)
                 .scaledToFit()
                 .cornerRadius(5)
-
+            
             Text(self.title)
                 .font(.system(size: 13))
                 .fontWeight(.bold)
                 .lineLimit(2)
-
+            
             Text(self.artist)
                 .font(.system(size: 13))
                 .lineLimit(2)

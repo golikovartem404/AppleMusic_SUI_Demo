@@ -13,16 +13,16 @@ struct PlaylistItem: View {
     var category: String?
     var artist: String?
     var description: String
-
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text(category ?? "")
                 .font(.system(size: 13))
                 .foregroundColor(.gray)
-
+            
             Text(title)
                 .font(.system(size: 16))
-
+            
             Text(description)
                 .font(.system(size: 18))
                 .foregroundColor(.gray)

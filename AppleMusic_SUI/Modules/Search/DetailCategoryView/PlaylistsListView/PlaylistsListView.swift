@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct PlaylistsList: View {
+struct PlaylistsListView: View {
     @State var playlists = Playlist.playlistsData
 
     let rows: [GridItem] = [
-         GridItem(.fixed(330))
-     ]
+        GridItem(.fixed(330))
+    ]
 
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
@@ -40,6 +40,6 @@ struct PlaylistsList: View {
 
 struct PlaylistsList_Previews: PreviewProvider {
     static var previews: some View {
-        PlaylistsList()
+        PlaylistsListView()
     }
 }

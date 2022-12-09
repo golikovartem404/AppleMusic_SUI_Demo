@@ -9,7 +9,28 @@ import SwiftUI
 
 struct DetailCategoryView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(showsIndicators: false) {
+            PlaylistsListView()
+            TracksListView()
+                .navigationBarItems(trailing: Button(action: {
+                    print("More options button pressed")
+                }, label: {
+                    Text(Image(systemName: "ellipsis"))
+                        .frame(width: 26, height: 26, alignment: .center)
+                        .foregroundColor(.red)
+                        .background(
+                            Color.white
+                                .cornerRadius(13)
+                                .shadow(
+                                    color: Color.init(UIColor.systemGray3),
+                                    radius: 2,
+                                    x: 0.5,
+                                    y: 0.5
+                                ))
+                        .font(.system(size: 18))
+                }))
+                .navigationTitle("The greatest hits")
+        }
     }
 }
 
