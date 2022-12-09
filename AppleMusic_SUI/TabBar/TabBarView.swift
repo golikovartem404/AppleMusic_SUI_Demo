@@ -34,7 +34,7 @@ struct TabBarView: View {
             }
             .accentColor(.red)
             
-            PlayerView()
+            MiniPlayerView()
         }
     }
 }
