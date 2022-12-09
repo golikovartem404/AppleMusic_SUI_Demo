@@ -23,10 +23,7 @@ struct TabBarView: View {
                     Text(Constants.Strings.TabBarTabs.radioTabTitle)
                 }
 
-                NavigationView {
-                    Text(Constants.Strings.TabBarTabs.searchTabTitle)
-                        .navigationTitle(Constants.Strings.NavigationBarTitles.searchTitle)
-                }
+                SearchView()
                 .tabItem {
                     Image(systemName: Constants.Strings.TabBarTabs.searchTabImageName)
                     Text(Constants.Strings.TabBarTabs.searchTabTitle)
