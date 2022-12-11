@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TracksListView: View {
-    @State var items = Track.tracksList
+    @State var items = MusicComposition.allMusic
 
     let rows: [GridItem] = [
         GridItem(.fixed(240))
@@ -16,7 +16,7 @@ struct TracksListView: View {
 
     var body: some View {
         VStack {
-            Text("Настроение – кайф")
+            Text("Mood is relax")
                 .font(.system(size: 20, weight: .bold, design: .default))
                 .fontWeight(.bold)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -24,7 +24,7 @@ struct TracksListView: View {
 
             ScrollView(.horizontal, showsIndicators: false)  {
                 LazyHGrid(rows: rows) {
-                    ForEach(items, id: \.id) { item in
+                    ForEach(items.filter( {$0.type == .track} ), id: \.id) { item in
                         TrackItem(image: item.image, title: item.title, artist: item.artist ?? "", description: item.description)
                     }
                 }
