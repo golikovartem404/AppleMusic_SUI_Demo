@@ -51,6 +51,6 @@ struct SearchResultItemView: View {
                     .font(.system(size: Constants.FontSize.searchResultItemTextFontSize))
             }
         }
-        .frame(height: Constants.Frames.searchBarHStackHeight)
+        .frame(height: Constants.Frames.searchResultItemHStackHeight)
     }
 }
