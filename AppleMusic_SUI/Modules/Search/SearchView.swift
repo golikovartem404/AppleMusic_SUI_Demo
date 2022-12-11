@@ -24,7 +24,7 @@ struct SearchView: View {
                         .navigationBarHidden(true)
                 }
             }
-            .navigationTitle("Search")
+            .navigationTitle(Constants.Strings.NavigationBarTitles.searchTitle)
         }
     }
 }

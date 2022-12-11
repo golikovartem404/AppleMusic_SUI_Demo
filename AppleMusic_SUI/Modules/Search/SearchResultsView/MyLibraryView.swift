@@ -12,9 +12,9 @@ struct MyLibraryView: View {
         VStack {
             Spacer()
 
-            Text("Your library is empty")
-                .frame(width: 150)
-                .font(.system(size: 17))
+            Text(Constants.Strings.MyLibraryViewTitle.title)
+                .frame(width: Constants.Frames.myLibraryViewTextWidth)
+                .font(.system(size: Constants.FontSize.myLibraryText))
                 .foregroundColor(.gray)
                 .multilineTextAlignment(.center)
 

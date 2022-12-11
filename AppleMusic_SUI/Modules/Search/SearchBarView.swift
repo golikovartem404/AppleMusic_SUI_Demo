@@ -15,11 +15,11 @@ struct SearchBarView: View {
         HStack {
             HStack(spacing: 8) {
                 Image(systemName: "magnifyingglass")
-                    .font(.system(size: 18))
+                    .font(.system(size: Constants.FontSize.searchBarText))
                     .foregroundColor(Color(.systemGray3))
-                    .padding(.leading, 12)
+                    .padding(.leading, Constants.Paddings.searchViewMainPadding)
 
-                TextField("Your library", text: $searchText)
+                TextField(Constants.Strings.TextFieldPlaceholders.searchBarPlaceholder, text: $searchText)
                     .onTapGesture {
                         isSearching = true
                     }
@@ -29,14 +29,14 @@ struct SearchBarView: View {
                         Image(systemName: "xmark.circle.fill")
                     })
                     .foregroundColor(Color(.systemGray3))
-                    .padding(.trailing, 12)
+                    .padding(.trailing, Constants.Paddings.searchViewMainPadding)
                 }
             }
-            .frame(height: 40)
+            .frame(height: Constants.Frames.searchBarHStackHeight)
             .background(Color.init(.systemGray6))
             .cornerRadius(15)
-            .padding(.top, 5)
-            .padding([.leading, .trailing], 12)
+            .padding(.top, Constants.Paddings.searchBarHStackTop)
+            .padding([.leading, .trailing], Constants.Paddings.searchViewMainPadding)
 
             if isSearching {
                 Button {
@@ -49,9 +49,9 @@ struct SearchBarView: View {
                         for: nil
                     )
                 } label: {
-                    Text("Cancel")
+                    Text(Constants.Strings.ButtonLabels.cancelButton)
                 }
-                .padding(.trailing, 12)
+                .padding(.trailing, Constants.Paddings.searchViewMainPadding)
             }
         }
         .transition(.move(edge: .trailing))
