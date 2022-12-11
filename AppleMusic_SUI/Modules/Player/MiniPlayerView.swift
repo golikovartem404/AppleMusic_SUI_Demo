@@ -23,7 +23,7 @@ struct MiniPlayerView: View {
                 .cornerRadius(8)
                 .padding(.leading, Constants.Paddings.playerImageLeading)
 
-            Text(Constants.Strings.PlayerText.songName)
+            Text("\(Constants.Strings.PlayerText.songName) - \(Constants.Strings.PlayerText.artistName)")
                 .padding(.leading, Constants.Paddings.playerTextLeading)
                 .padding(.trailing, Constants.Paddings.playerTextTrailing)
 

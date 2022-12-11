@@ -17,24 +17,24 @@ struct TrackItem: View {
         VStack(alignment: .leading) {
             Image(self.image)
                 .resizable()
-                .frame(width: 185, height: 185)
+                .frame(width: Constants.Frames.trackItemImage, height: Constants.Frames.trackItemImage)
                 .scaledToFit()
                 .cornerRadius(5)
             
             Text(self.title)
-                .font(.system(size: 13))
+                .font(.system(size: Constants.FontSize.trackItemText))
                 .fontWeight(.bold)
                 .lineLimit(2)
             
             Text(self.artist)
-                .font(.system(size: 13))
+                .font(.system(size: Constants.FontSize.trackItemText))
                 .lineLimit(2)
             
             Text(self.description)
-                .font(.system(size: 13))
+                .font(.system(size: Constants.FontSize.trackItemText))
                 .lineLimit(2)
                 .foregroundColor(.gray)
         }
-        .frame(width: 185, height: 235)
+        .frame(width: Constants.Frames.trackItemImage, height: Constants.Frames.trackItemHeight)
     }
 }
