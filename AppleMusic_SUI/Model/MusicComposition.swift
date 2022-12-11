@@ -7,11 +7,6 @@
 
 import Foundation
 
-enum MusicCompositionType {
-    case playlist
-    case track
-}
-
 struct MusicComposition: Identifiable {
     let id = UUID()
     let image: String
