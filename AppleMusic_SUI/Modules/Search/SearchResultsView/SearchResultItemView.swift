@@ -17,7 +17,10 @@ struct SearchResultItemView: View {
         HStack(alignment: .center) {
             Image(self.image)
                 .resizable()
-                .frame(width: 45, height: 45)
+                .frame(
+                    width: Constants.Frames.searchResultItemImageWidthHeight,
+                    height: Constants.Frames.searchResultItemImageWidthHeight
+                )
                 .scaledToFit()
                 .cornerRadius(5)
 
@@ -25,25 +28,29 @@ struct SearchResultItemView: View {
                 Spacer()
 
                 Text(self.title)
-                    .font(.system(size: 14))
+                    .font(.system(size: Constants.FontSize.searchResultItemTextFontSize))
 
-                Text("\((type == .playlist ? "Плейлист –" : "Песня –") + self.description)")
-                    .font(.system(size: 14))
+                Text("\((type == .playlist ? Constants.Strings.CellsText.playlist : Constants.Strings.CellsText.track) + self.description)")
+                    .font(.system(size: Constants.FontSize.searchResultItemTextFontSize))
                     .foregroundColor(.gray)
 
                 Spacer()
                 Divider()
             }
-            .padding(.leading, 12)
+            .padding(.leading, Constants.Paddings.searchViewMainPadding)
 
             Spacer()
 
             Button {} label: {
                 Text(Image(systemName: (type == .playlist) ? "chevron.right" : "ellipsis"))
-                    .frame(width: 20, height: 20, alignment: .center)
-                    .font(.system(size: 14))
+                    .frame(
+                        width: Constants.Frames.searchResultItemButtonHeightWidth,
+                        height: Constants.Frames.searchResultItemButtonHeightWidth,
+                        alignment: .center
+                    )
+                    .font(.system(size: Constants.FontSize.searchResultItemTextFontSize))
             }
         }
-        .frame(height: 60)
+        .frame(height: Constants.Frames.searchBarHStackHeight)
     }
 }

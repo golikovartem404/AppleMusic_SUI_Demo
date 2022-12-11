@@ -24,6 +24,9 @@ enum Constants {
 
         static let stationsLazyVGridLeading: CGFloat = 16
         static let stationsLazyVGridTrailing: CGFloat = 16
+
+        static let searchViewMainPadding: CGFloat = 12
+        static let searchBarHStackTop: CGFloat = 5
     }
 
     enum Frames {
@@ -42,6 +45,14 @@ enum Constants {
 
         static let stationItemImageWidth: CGFloat = 100
         static let stationItemImageHeight: CGFloat = 100
+
+        static let searchBarHStackHeight : CGFloat = 40
+
+        static let searchResultItemImageWidthHeight: CGFloat = 45
+        static let searchResultItemHStackHeight: CGFloat = 60
+        static let searchResultItemButtonHeightWidth: CGFloat = 20
+
+        static let myLibraryViewTextWidth: CGFloat = 150
     }
 
     enum FontSize {
@@ -52,6 +63,11 @@ enum Constants {
         static let radioStationItemTitle: CGFloat = 20
 
         static let stationsSectionHeader: CGFloat = 24
+
+        static let searchBarText :CGFloat = 18
+        static let searchResultItemTextFontSize: CGFloat = 14
+
+        static let myLibraryText: CGFloat = 17
     }
 
     enum Strings {
@@ -92,6 +108,28 @@ enum Constants {
 
         enum SectionHeaders {
             static let stationsHeader = "Stations"
+        }
+
+        enum TextFieldPlaceholders {
+            static let searchBarPlaceholder = "Search playlists and tracks"
+        }
+
+        enum ButtonLabels {
+            static let cancelButton = "Cancel"
+        }
+
+        enum CellsText {
+            static let playlist = "Playlist –"
+            static let track = "Track –"
+        }
+
+        enum PickerMode {
+            static let appleMusicLibrary = "Apple Music"
+            static let myLibrary = "My library"
+        }
+
+        enum MyLibraryViewTitle {
+            static let title = "Your library is empty"
         }
     }
 }

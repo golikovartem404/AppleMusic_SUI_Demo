@@ -14,12 +14,11 @@ struct SearchResultsView: View {
 
     var body: some View {
         Picker(selection: $selected, label: Text("")) {
-            Text("Apple Music").tag(0)
-            Text("Ваша Медиатека").tag(1)
+            Text(Constants.Strings.PickerMode.appleMusicLibrary).tag(0)
+            Text(Constants.Strings.PickerMode.myLibrary).tag(1)
         }
         .pickerStyle(SegmentedPickerStyle())
-        .padding(.leading, 12)
-        .padding(.trailing, 12)
+        .padding([.leading, .trailing], Constants.Paddings.searchViewMainPadding)
 
         if selected == 0 {
             AppleMusicLibraryView(model: model, searchText: searchText)
