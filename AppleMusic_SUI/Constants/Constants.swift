@@ -27,6 +27,11 @@ enum Constants {
 
         static let searchViewMainPadding: CGFloat = 12
         static let searchBarHStackTop: CGFloat = 5
+
+        static let playlistsListTop: CGFloat = 10
+
+        static let playerControlButtonPadding: CGFloat = 70
+        static let sliderPadding: CGFloat = 10
     }
 
     enum Frames {
@@ -53,6 +58,18 @@ enum Constants {
         static let searchResultItemButtonHeightWidth: CGFloat = 20
 
         static let myLibraryViewTextWidth: CGFloat = 150
+
+        static let detailNavigationBarButtonWidthHeight: CGFloat = 26
+        static let playlistItemSize: CGFloat = 330
+        static let trackItemSize: CGFloat = 240
+        static let trackItemImage: CGFloat = 185
+        static let trackItemHeight: CGFloat = 235
+        static let trackListHeight: CGFloat = 270
+        static let playlistImageWidth: CGFloat = 390
+        static let playlistsListHeight: CGFloat = 365
+
+        static let playerMediumButtonsFrame: CGFloat = 30
+        static let playerBottomButtonsFrame: CGFloat = 25
     }
 
     enum FontSize {
@@ -68,6 +85,15 @@ enum Constants {
         static let searchResultItemTextFontSize: CGFloat = 14
 
         static let myLibraryText: CGFloat = 17
+
+        static let detailNavigationBarButtonFontSize: CGFloat = 18
+        static let trackItemText: CGFloat = 13
+        static let playlicatCategoryText: CGFloat = 15
+        static let playlicatTitleText: CGFloat = 16
+        static let playlicatDescriptionText: CGFloat = 18
+        static let trackListText: CGFloat = 20
+
+        static let playerTrackText: CGFloat = 27
     }
 
     enum Strings {
@@ -90,7 +116,8 @@ enum Constants {
 
         enum PlayerText {
             static let albumImageName = "albumLogo"
-            static let songName = "Imagine Dragons - Radioactive"
+            static let artistName = "Imagine Dragons"
+            static let songName = "Radioactive"
             static let playButtonImageName = "play.fill"
             static let forwardButtonImageName = "forward.fill"
         }
@@ -131,5 +158,15 @@ enum Constants {
         enum MyLibraryViewTitle {
             static let title = "Your library is empty"
         }
+
+        enum DetailCategoryViewText {
+            static let moreButtonAction = "More options button pressed"
+            static let navigationTitle = "The greatest hits"
+            static let trackListTitle = "Mood is relax"
+        }
+    }
+
+    enum Opacity {
+        static let playerElementsOpacity: CGFloat = 0.8
     }
 }

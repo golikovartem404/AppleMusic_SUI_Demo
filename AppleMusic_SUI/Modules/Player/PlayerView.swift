@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PlayerView: View {
     @Environment(\.presentationMode) var presentationMode
-    @State private var volumeLevel: Double  = 5.0
+    @State private var volumeLevel: Double = 0.5
     @State private var currentTime: Double = 0.0
     var totalTime: Double = 4.5 * 60.0
 
@@ -28,7 +28,10 @@ struct PlayerView: View {
             VStack {
                 Image("albumLogo")
                     .resizable()
-                    .frame(maxWidth: UIScreen.main.bounds.size.width - (UIScreen.main.bounds.size.width / 3), maxHeight: UIScreen.main.bounds.size.width - (UIScreen.main.bounds.size.width / 3))
+                    .frame(
+                        maxWidth: UIScreen.main.bounds.size.width - (UIScreen.main.bounds.size.width / 3),
+                        maxHeight: UIScreen.main.bounds.size.width - (UIScreen.main.bounds.size.width / 3)
+                    )
                     .scaledToFit()
                     .cornerRadius(10)
                     .shadow(color: .black, radius: 6, x: 0, y: 0)
@@ -40,24 +43,28 @@ struct PlayerView: View {
 
                 ZStack {
                     VStack(alignment: .leading) {
-                        Text("Radioactive")
-                            .font(.system(size: 27, weight: .bold))
+                        Text(Constants.Strings.PlayerText.songName)
+                            .font(.system(size: Constants.FontSize.playerTrackText, weight: .bold))
                             .foregroundColor(.white)
                             .lineLimit(1)
-                            .opacity(0.8)
-                        Text("Imagine Dragons")
-                            .font(.system(size: 27, weight: .bold))
+                            .opacity(Constants.Opacity.playerElementsOpacity)
+
+                        Text(Constants.Strings.PlayerText.artistName)
+                            .font(.system(size: Constants.FontSize.playerTrackText, weight: .bold))
                             .foregroundColor(Color(red: 188/255, green: 173/255, blue: 116/255))
-                            .opacity(0.8)
+                            .opacity(Constants.Opacity.playerElementsOpacity)
                     }
-                    .frame(maxWidth: UIScreen.main.bounds.size.width, alignment: .leading)
+                    .frame(
+                        maxWidth: UIScreen.main.bounds.size.width,
+                        alignment: .leading
+                    )
                     .padding(.leading, UIScreen.main.bounds.size.width / 10)
                     .padding(.trailing, UIScreen.main.bounds.size.width / 5)
 
                     Button {} label: {
                         Text("\(Image(systemName: "ellipsis"))")
                             .foregroundColor(.black)
-                            .opacity(0.8)
+                            .opacity(Constants.Opacity.playerElementsOpacity)
                             .frame(width: 30, height: 30, alignment: .center)
                             .background(
                                 Color.white
@@ -65,94 +72,117 @@ struct PlayerView: View {
                                     .shadow(color: .gray, radius: 3, x: 1.0, y: 1.0)
                             )
                     }
-                    .frame(maxWidth: UIScreen.main.bounds.size.width, alignment: .trailing)
+                    .frame(
+                        maxWidth: UIScreen.main.bounds.size.width,
+                        alignment: .trailing
+                    )
                     .padding(.trailing, 40)
                 }
 
-                // time bar
                 Slider(value: $currentTime, in: 0...totalTime)
-                    .accentColor(Color.white).opacity(0.8)
+                    .accentColor(Color.white).opacity(Constants.Opacity.playerElementsOpacity)
                     .frame(maxWidth: UIScreen.main.bounds.size.width / 1.25)
-                    .padding(.leading, 10)
-                    .padding(.trailing, 10)
-                    .padding(.top, 10)
+                    .padding([.leading, .trailing], Constants.Paddings.sliderPadding)
+                    .padding(.top, Constants.Paddings.sliderPadding)
                     .padding(.bottom, 5)
 
                 HStack {
                     Text("\(timeString(time:currentTime))")
+
                     Spacer()
+
                     Text("-\(timeString(time: totalTime - currentTime))")
                 }
-                .foregroundColor(Color.white).opacity(0.8)
-                .frame(maxWidth: (UIScreen.main.bounds.size.width / 1.25), maxHeight: 3, alignment: .leading)
+                .foregroundColor(Color.white).opacity(Constants.Opacity.playerElementsOpacity)
+                .frame(
+                    maxWidth: (UIScreen.main.bounds.size.width / 1.25),
+                    maxHeight: 3,
+                    alignment: .leading
+                )
                 .padding(.bottom, 50)
 
-                // back play forward
                 HStack {
                     Button {} label: {
                         Image(systemName: "backward.fill")
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 30, height: 30)
+                            .frame(
+                                width: Constants.Frames.playerMediumButtonsFrame,
+                                height: Constants.Frames.playerMediumButtonsFrame
+                            )
                     }
+
                     Button {} label: {
                         Image(systemName: "play.fill")
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 30, height: 30)
-                            .padding(.leading, 70)
-                            .padding(.trailing, 70)
+                            .frame(
+                                width: Constants.Frames.playerMediumButtonsFrame,
+                                height: Constants.Frames.playerMediumButtonsFrame
+                            )
+                            .padding([.leading, .trailing], Constants.Paddings.playerControlButtonPadding)
                     }
+
                     Button {} label: {
                         Image(systemName: "forward.fill")
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 30, height: 30)
+                            .frame(
+                                width: Constants.Frames.playerMediumButtonsFrame,
+                                height: Constants.Frames.playerMediumButtonsFrame
+                            )
                     }
                 }
-                .foregroundColor(Color.white).opacity(0.8)
+                .foregroundColor(Color.white).opacity(Constants.Opacity.playerElementsOpacity)
                 .padding(.bottom, 50)
 
-                // volume bar
                 HStack {
                     Image(systemName: "speaker.fill")
-                        .foregroundColor(Color.white).opacity(0.8)
+                        .foregroundColor(Color.white).opacity(Constants.Opacity.playerElementsOpacity)
 
-                    Slider(value: $volumeLevel, in: 0...10)
-                        .accentColor(Color.white).opacity(0.8)
-                        .padding(.leading, 10)
-                        .padding(.trailing, 10)
+                    Slider(value: $volumeLevel, in: 0...1)
+                        .accentColor(Color.white).opacity(Constants.Opacity.playerElementsOpacity)
+                        .padding([.leading, .trailing], Constants.Paddings.sliderPadding)
 
                     Image(systemName: "speaker.wave.3.fill")
-                        .foregroundColor(Color.white).opacity(0.8)
+                        .foregroundColor(Color.white).opacity(Constants.Opacity.playerElementsOpacity)
                 }
                 .frame(maxWidth: UIScreen.main.bounds.size.width / 1.25)
                 .padding(.bottom, 60)
 
-                // bottom controls
                 HStack {
                     Button {} label: {
                         Image(systemName: "quote.bubble")
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 25, height: 25)
+                            .frame(
+                                width: Constants.Frames.playerBottomButtonsFrame,
+                                height: Constants.Frames.playerBottomButtonsFrame
+                            )
                     }
+
                     Button {} label: {
                         Image(systemName: "airplayaudio")
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 25, height: 25)
-                            .padding(.leading, 70)
-                            .padding(.trailing, 70)
+                            .frame(
+                                width: Constants.Frames.playerBottomButtonsFrame,
+                                height: Constants.Frames.playerBottomButtonsFrame
+                            )
+                            .padding([.leading, .trailing], Constants.Paddings.playerControlButtonPadding)
                     }
+                    
                     Button {} label: {
                         Image(systemName: "shuffle")
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 25, height: 25)
+                            .frame(
+                                width: Constants.Frames.playerBottomButtonsFrame,
+                                height: Constants.Frames.playerBottomButtonsFrame
+                            )
                     }
                 }
-                .foregroundColor(Color.white).opacity(0.8)
+                .foregroundColor(Color.white).opacity(Constants.Opacity.playerElementsOpacity)
 
                 Spacer()
             }

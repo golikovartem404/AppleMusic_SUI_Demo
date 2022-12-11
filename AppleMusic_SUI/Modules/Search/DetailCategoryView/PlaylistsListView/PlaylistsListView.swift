@@ -11,7 +11,7 @@ struct PlaylistsListView: View {
     @State var items = MusicComposition.allMusic
 
     let rows: [GridItem] = [
-        GridItem(.fixed(330))
+        GridItem(.fixed(Constants.Frames.playlistItemSize))
     ]
 
     var body: some View {
@@ -29,12 +29,12 @@ struct PlaylistsListView: View {
                     )
                 }
             }
-            .padding([.leading, .trailing], 12)
-            .padding(.bottom, 10)
+            .padding([.leading, .trailing], Constants.Paddings.searchViewMainPadding)
+            .padding(.bottom, Constants.Paddings.playlistsListTop)
 
             Divider()
         }
-        .frame(height: 365)
+        .frame(height: Constants.Frames.playlistsListHeight)
     }
 }
 

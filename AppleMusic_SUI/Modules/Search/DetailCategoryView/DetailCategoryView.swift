@@ -13,11 +13,14 @@ struct DetailCategoryView: View {
             PlaylistsListView()
             TracksListView()
                 .navigationBarItems(trailing: Button(action: {
-                    print("More options button pressed")
+                    print(Constants.Strings.DetailCategoryViewText.moreButtonAction)
                 }, label: {
                     Text(Image(systemName: "ellipsis"))
-                        .frame(width: 26, height: 26, alignment: .center)
-                        .foregroundColor(.red)
+                        .frame(
+                            width: Constants.Frames.detailNavigationBarButtonWidthHeight,
+                            height: Constants.Frames.detailNavigationBarButtonWidthHeight,
+                            alignment: .center
+                        )
                         .background(
                             Color.white
                                 .cornerRadius(13)
@@ -27,9 +30,9 @@ struct DetailCategoryView: View {
                                     x: 0.5,
                                     y: 0.5
                                 ))
-                        .font(.system(size: 18))
+                        .font(.system(size: Constants.FontSize.detailNavigationBarButtonFontSize))
                 }))
-                .navigationTitle("The greatest hits")
+                .navigationTitle(Constants.Strings.DetailCategoryViewText.navigationTitle)
         }
     }
 }

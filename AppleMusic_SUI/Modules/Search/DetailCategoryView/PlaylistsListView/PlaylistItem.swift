@@ -17,20 +17,20 @@ struct PlaylistItem: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(category ?? "")
-                .font(.system(size: 13))
+                .font(.system(size: Constants.FontSize.playlicatCategoryText))
                 .foregroundColor(.gray)
             
             Text(title)
-                .font(.system(size: 16))
+                .font(.system(size: Constants.FontSize.playlicatTitleText))
             
             Text(description)
-                .font(.system(size: 18))
+                .font(.system(size: Constants.FontSize.playlicatDescriptionText))
                 .foregroundColor(.gray)
             
             Image(image)
                 .resizable()
                 .clipped()
-                .frame(width: 390)
+                .frame(width: Constants.Frames.playlistImageWidth)
                 .scaledToFit()
                 .cornerRadius(10)
         }
