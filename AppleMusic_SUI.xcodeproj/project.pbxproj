@@ -11,8 +11,6 @@
 		9C7E7F052943743400FF48A5 /* CategoryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7E7F042943743400FF48A5 /* CategoryItemView.swift */; };
 		9C7E7F072943745000FF48A5 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7E7F062943745000FF48A5 /* SearchView.swift */; };
 		9C7E7F1929437E9600FF48A5 /* DetailCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7E7F1829437E9600FF48A5 /* DetailCategoryView.swift */; };
-		9C7E7F1B29437EC300FF48A5 /* TrackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7E7F1A29437EC300FF48A5 /* TrackModel.swift */; };
-		9C7E7F1D29437ED200FF48A5 /* PlaylistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7E7F1C29437ED200FF48A5 /* PlaylistModel.swift */; };
 		9C7E7F1F294382F300FF48A5 /* PlaylistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7E7F1E294382F300FF48A5 /* PlaylistItem.swift */; };
 		9C7E7F212943837600FF48A5 /* PlaylistsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7E7F202943837600FF48A5 /* PlaylistsListView.swift */; };
 		9C7E7F232943840E00FF48A5 /* TrackItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7E7F222943840E00FF48A5 /* TrackItem.swift */; };
@@ -40,6 +38,7 @@
 		9CF6F09C2945C8DB00C4663D /* AppleMusicLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF6F09B2945C8DB00C4663D /* AppleMusicLibraryView.swift */; };
 		9CF6F09E2945C8E600C4663D /* MyLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF6F09D2945C8E600C4663D /* MyLibraryView.swift */; };
 		9CF6F0A02945C8F800C4663D /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF6F09F2945C8F800C4663D /* SearchBarView.swift */; };
+		9CF6F0A22945C9DA00C4663D /* MusicComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF6F0A12945C9DA00C4663D /* MusicComposition.swift */; };
 		9CFCE6752943261400CD0CDC /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFCE6742943261400CD0CDC /* PlayerView.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,8 +47,6 @@
 		9C7E7F042943743400FF48A5 /* CategoryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemView.swift; sourceTree = "<group>"; };
 		9C7E7F062943745000FF48A5 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		9C7E7F1829437E9600FF48A5 /* DetailCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCategoryView.swift; sourceTree = "<group>"; };
-		9C7E7F1A29437EC300FF48A5 /* TrackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackModel.swift; sourceTree = "<group>"; };
-		9C7E7F1C29437ED200FF48A5 /* PlaylistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistModel.swift; sourceTree = "<group>"; };
 		9C7E7F1E294382F300FF48A5 /* PlaylistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistItem.swift; sourceTree = "<group>"; };
 		9C7E7F202943837600FF48A5 /* PlaylistsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsListView.swift; sourceTree = "<group>"; };
 		9C7E7F222943840E00FF48A5 /* TrackItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackItem.swift; sourceTree = "<group>"; };
@@ -78,6 +75,7 @@
 		9CF6F09B2945C8DB00C4663D /* AppleMusicLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicLibraryView.swift; sourceTree = "<group>"; };
 		9CF6F09D2945C8E600C4663D /* MyLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLibraryView.swift; sourceTree = "<group>"; };
 		9CF6F09F2945C8F800C4663D /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		9CF6F0A12945C9DA00C4663D /* MusicComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicComposition.swift; sourceTree = "<group>"; };
 		9CFCE6742943261400CD0CDC /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -268,8 +266,7 @@
 				9CC0969D293242E5008EF388 /* Model.swift */,
 				9CB263E5293B8A180060A487 /* RadioModel.swift */,
 				9C7E7F00294372E700FF48A5 /* CategoryModel.swift */,
-				9C7E7F1A29437EC300FF48A5 /* TrackModel.swift */,
-				9C7E7F1C29437ED200FF48A5 /* PlaylistModel.swift */,
+				9CF6F0A12945C9DA00C4663D /* MusicComposition.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -400,17 +397,16 @@
 				9C7E7F212943837600FF48A5 /* PlaylistsListView.swift in Sources */,
 				9CC0969C2932428A008EF388 /* EditListView.swift in Sources */,
 				9CF6F0A02945C8F800C4663D /* SearchBarView.swift in Sources */,
-				9C7E7F1D29437ED200FF48A5 /* PlaylistModel.swift in Sources */,
 				9C7E7F232943840E00FF48A5 /* TrackItem.swift in Sources */,
 				9CF6F09C2945C8DB00C4663D /* AppleMusicLibraryView.swift in Sources */,
 				9CB263EE293B8FAC0060A487 /* StationsItemView.swift in Sources */,
 				9CB263E8293B8CC30060A487 /* FavouritesView.swift in Sources */,
+				9CF6F0A22945C9DA00C4663D /* MusicComposition.swift in Sources */,
 				9CB263F0293B8FB20060A487 /* StationsView.swift in Sources */,
 				9CB263EA293B8CD40060A487 /* FavouritesItemView.swift in Sources */,
 				9CC0968C2932408F008EF388 /* AppleMusic_SUIApp.swift in Sources */,
 				9C7E7F1F294382F300FF48A5 /* PlaylistItem.swift in Sources */,
 				9CF6F09A2945C8C700C4663D /* SearchResultsView.swift in Sources */,
-				9C7E7F1B29437EC300FF48A5 /* TrackModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
