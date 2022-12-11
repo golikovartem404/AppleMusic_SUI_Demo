@@ -10,6 +10,7 @@ import SwiftUI
 struct SearchView: View {
     @State private var isSearching = false
     @State private var searchText = ""
+    @State var model = MusicCompositionsPublicModel()
 
     var body: some View {
         NavigationView {
@@ -17,6 +18,10 @@ struct SearchView: View {
                 SearchBarView(searchText: $searchText, isSearching: $isSearching)
                 if !isSearching {
                     CategoriesView()
+                        .navigationBarHidden(false)
+                } else {
+                    SearchResultsView(model: model, searchText: $searchText)
+                        .navigationBarHidden(true)
                 }
             }
             .navigationTitle("Search")

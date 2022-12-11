@@ -9,7 +9,17 @@ import SwiftUI
 
 struct MyLibraryView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Spacer()
+
+            Text("Your library is empty")
+                .frame(width: 150)
+                .font(.system(size: 17))
+                .foregroundColor(.gray)
+                .multilineTextAlignment(.center)
+
+            Spacer()
+        }
     }
 }
 

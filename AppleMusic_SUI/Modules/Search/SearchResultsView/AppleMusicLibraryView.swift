@@ -25,10 +25,10 @@ struct AppleMusicLibraryView: View {
                             SearchResultItemView(image: item.image, title: item.title, description: item.description, type: item.type)
                         }
                     } else {
-                        ForEach(model.data.filter({ "\($0.title)".contains(searchText) && $0.type == .playlist }), id: \.id) { item in
+                        ForEach(model.data.filter({ "\($0.title.lowercased())".contains(searchText.lowercased()) && $0.type == .playlist }), id: \.id) { item in
                             SearchResultItemView(image: item.image, title: item.title, description: item.description, type: item.type)
                         }
-                        ForEach(model.data.filter({ "\($0.title)".contains(searchText) && $0.type == .track }), id: \.id) { item in
+                        ForEach(model.data.filter({ "\($0.title.lowercased())".contains(searchText.lowercased()) && $0.type == .track }), id: \.id) { item in
                             SearchResultItemView(image: item.image, title: item.title, description: item.description, type: item.type)
                         }
                     }

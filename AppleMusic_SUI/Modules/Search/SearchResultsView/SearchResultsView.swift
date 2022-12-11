@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct SearchResultsView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+    @ObservedObject var model: MusicCompositionsPublicModel
+    @Binding var searchText: String
+    @State private var selected = 0
 
-struct SearchResultsView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchResultsView()
+    var body: some View {
+        Picker(selection: $selected, label: Text("")) {
+            Text("Apple Music").tag(0)
+            Text("Ваша Медиатека").tag(1)
+        }
+        .pickerStyle(SegmentedPickerStyle())
+        .padding(.leading, 12)
+        .padding(.trailing, 12)
+
+        if selected == 0 {
+            AppleMusicLibraryView(model: model, searchText: searchText)
+        } else {
+            MyLibraryView()
+        }
     }
 }
