@@ -10,6 +10,20 @@ import SwiftUI
 
 enum Constants {
 
+    enum Insets {
+        static let collectionViewInset: CGFloat = 4
+        static let sectionInset: CGFloat = 8
+    }
+
+    enum CollectionViewElementsSize {
+        static let itemWidth: CGFloat = 0.5
+        static let itemHeight: CGFloat = 1
+        static let groupWidth: CGFloat = 1
+        static let groupHeight: CGFloat = 0.35
+        static let headerWidth: CGFloat = 1
+        static let headerHeight: CGFloat = 45
+    }
+
     enum Paddings {
         static let playerImageLeading: CGFloat = 20
         static let playerTextLeading: CGFloat = 5
@@ -32,6 +46,11 @@ enum Constants {
 
         static let playerControlButtonPadding: CGFloat = 70
         static let sliderPadding: CGFloat = 10
+    }
+
+    enum Constraints {
+        static let cellTitleLeading: CGFloat = 10
+        static let cellTitleBottom: CGFloat = -12
     }
 
     enum Frames {
@@ -135,6 +154,7 @@ enum Constants {
 
         enum SectionHeaders {
             static let stationsHeader = "Stations"
+            static let categoryListHeader = "Search by category"
         }
 
         enum TextFieldPlaceholders {
@@ -163,6 +183,11 @@ enum Constants {
             static let moreButtonAction = "More options button pressed"
             static let navigationTitle = "The greatest hits"
             static let trackListTitle = "Mood is relax"
+        }
+
+        enum Identifiers {
+            static let categoryCellIdentifier = "CategoryCollectionViewCell"
+            static let headerIdentifier = "CategoryCollectionHeader"
         }
     }
 

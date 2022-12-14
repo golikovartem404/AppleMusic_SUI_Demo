@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C03F3CC294A030500E34E38 /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03F3CB294A030500E34E38 /* CategoryListViewController.swift */; };
+		9C03F3CE294A031400E34E38 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03F3CD294A031400E34E38 /* CategoryCollectionViewCell.swift */; };
+		9C03F3D0294A033B00E34E38 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03F3CF294A033B00E34E38 /* CategoryListView.swift */; };
+		9C03F3D2294A080A00E34E38 /* CategoryCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03F3D1294A080A00E34E38 /* CategoryCollectionHeader.swift */; };
+		9C03F3D4294A0C7B00E34E38 /* DetailCategoryHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03F3D3294A0C7B00E34E38 /* DetailCategoryHostingController.swift */; };
 		9C7E7F01294372E700FF48A5 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7E7F00294372E700FF48A5 /* CategoryModel.swift */; };
 		9C7E7F052943743400FF48A5 /* CategoryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7E7F042943743400FF48A5 /* CategoryItemView.swift */; };
 		9C7E7F072943745000FF48A5 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7E7F062943745000FF48A5 /* SearchView.swift */; };
@@ -46,6 +51,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C03F3CB294A030500E34E38 /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
+		9C03F3CD294A031400E34E38 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		9C03F3CF294A033B00E34E38 /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
+		9C03F3D1294A080A00E34E38 /* CategoryCollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionHeader.swift; sourceTree = "<group>"; };
+		9C03F3D3294A0C7B00E34E38 /* DetailCategoryHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCategoryHostingController.swift; sourceTree = "<group>"; };
 		9C7E7F00294372E700FF48A5 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		9C7E7F042943743400FF48A5 /* CategoryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemView.swift; sourceTree = "<group>"; };
 		9C7E7F062943745000FF48A5 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -96,11 +106,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C03F3CA294A02D700E34E38 /* UIKitElements */ = {
+			isa = PBXGroup;
+			children = (
+				9C03F3CB294A030500E34E38 /* CategoryListViewController.swift */,
+				9C03F3CD294A031400E34E38 /* CategoryCollectionViewCell.swift */,
+				9C03F3D1294A080A00E34E38 /* CategoryCollectionHeader.swift */,
+			);
+			path = UIKitElements;
+			sourceTree = "<group>";
+		};
 		9C7E7F022943740400FF48A5 /* Search */ = {
 			isa = PBXGroup;
 			children = (
 				9C7E7F062943745000FF48A5 /* SearchView.swift */,
 				9CF6F09F2945C8F800C4663D /* SearchBarView.swift */,
+				9C03F3CA294A02D700E34E38 /* UIKitElements */,
 				9CF6F0962945C88F00C4663D /* SearchResultsView */,
 				9C7E7F1529437E6300FF48A5 /* DetailCategoryView */,
 				9C7E7F032943740F00FF48A5 /* CategoryView */,
@@ -111,6 +132,7 @@
 		9C7E7F032943740F00FF48A5 /* CategoryView */ = {
 			isa = PBXGroup;
 			children = (
+				9C03F3CF294A033B00E34E38 /* CategoryListView.swift */,
 				9C7E7F042943743400FF48A5 /* CategoryItemView.swift */,
 				9CF6F0A32945CCB200C4663D /* CategoriesView.swift */,
 			);
@@ -120,6 +142,7 @@
 		9C7E7F1529437E6300FF48A5 /* DetailCategoryView */ = {
 			isa = PBXGroup;
 			children = (
+				9C03F3D3294A0C7B00E34E38 /* DetailCategoryHostingController.swift */,
 				9C7E7F1829437E9600FF48A5 /* DetailCategoryView.swift */,
 				9C7E7F1729437E8600FF48A5 /* TracksListView */,
 				9C7E7F1629437E7700FF48A5 /* PlaylistsListView */,
@@ -385,13 +408,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C03F3D4294A0C7B00E34E38 /* DetailCategoryHostingController.swift in Sources */,
 				9C7E7F072943745000FF48A5 /* SearchView.swift in Sources */,
 				9CC0969E293242E5008EF388 /* Model.swift in Sources */,
 				9C7E7F052943743400FF48A5 /* CategoryItemView.swift in Sources */,
 				9CC0968E2932408F008EF388 /* ContentView.swift in Sources */,
+				9C03F3CE294A031400E34E38 /* CategoryCollectionViewCell.swift in Sources */,
 				9CB263E6293B8A180060A487 /* RadioModel.swift in Sources */,
 				9C7E7F1929437E9600FF48A5 /* DetailCategoryView.swift in Sources */,
 				9CC096A629324F8D008EF388 /* TabBarView.swift in Sources */,
+				9C03F3D0294A033B00E34E38 /* CategoryListView.swift in Sources */,
 				9CF6F09E2945C8E600C4663D /* MyLibraryView.swift in Sources */,
 				9CFCE6752943261400CD0CDC /* PlayerView.swift in Sources */,
 				9CC096A8293250D3008EF388 /* CommonLibraryView.swift in Sources */,
@@ -400,8 +426,10 @@
 				9CC096B3293255A2008EF388 /* Constants.swift in Sources */,
 				9CF6F0982945C8BA00C4663D /* SearchResultItemView.swift in Sources */,
 				9CC0969A2932413E008EF388 /* LibraryView.swift in Sources */,
+				9C03F3CC294A030500E34E38 /* CategoryListViewController.swift in Sources */,
 				9CB263EC293B8DAC0060A487 /* RadioView.swift in Sources */,
 				9CF6F0A42945CCB200C4663D /* CategoriesView.swift in Sources */,
+				9C03F3D2294A080A00E34E38 /* CategoryCollectionHeader.swift in Sources */,
 				9CC096A029324415008EF388 /* ListItemView.swift in Sources */,
 				9C7E7F252943841800FF48A5 /* TracksListView.swift in Sources */,
 				9C7E7F212943837600FF48A5 /* PlaylistsListView.swift in Sources */,
