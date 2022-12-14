@@ -116,6 +116,6 @@ extension CategoryListViewController: UICollectionViewDataSource, UICollectionVi
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //
+        navigationController?.pushViewController(DetailCategoryViewController(), animated: true)
     }
 }
