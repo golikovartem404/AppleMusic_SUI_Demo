@@ -9,7 +9,11 @@ import UIKit
 
 class CategoryCollectionViewCell: UICollectionViewCell {
 
+    // MARK: - Properties
+
     static let identifier = "CotegoryCollectionViewCell"
+
+    // MARK: - Outlets
 
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
@@ -30,6 +34,8 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         return title
     }()
 
+    // MARK: - Lifecycle
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .white
@@ -41,6 +47,8 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Setups
+
     private func setupHierarchy() {
         addSubview(imageView)
         imageView.addSubview(title)
@@ -48,8 +56,6 @@ class CategoryCollectionViewCell: UICollectionViewCell {
 
     private func setupLayout() {
         NSLayoutConstraint.activate([
-//            imageView.widthAnchor.constraint(equalTo: contentView.widthAnchor),
-//            imageView.heightAnchor.constraint(equalTo: contentView.heightAnchor),
             imageView.topAnchor.constraint(equalTo: self.topAnchor),
             imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
@@ -64,5 +70,11 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     func setData(forCategory category: CategoryModel) {
         imageView.image = UIImage(named: category.categoryImage)
         title.text = category.categoryTitle
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageView.image = nil
+        title.text = nil
     }
 }

@@ -9,6 +9,7 @@ import UIKit
 import SwiftUI
 
 struct CategoryListView: UIViewControllerRepresentable {
+    
     func makeUIViewController(context: Context) -> some CategoryListViewController {
         return CategoryListViewController()
     }

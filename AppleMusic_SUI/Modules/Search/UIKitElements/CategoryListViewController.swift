@@ -9,6 +9,8 @@ import UIKit
 
 class CategoryListViewController: UIViewController {
 
+    // MARK: - Outlets
+
     private lazy var categoryCollection: UICollectionView = {
         let collection = UICollectionView(
             frame: .zero,
@@ -18,11 +20,18 @@ class CategoryListViewController: UIViewController {
             CategoryCollectionViewCell.self,
             forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier
         )
+        collection.register(
+            CategoryCollectionHeader.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: CategoryCollectionHeader.identifier
+        )
         collection.delegate = self
         collection.dataSource = self
         collection.translatesAutoresizingMaskIntoConstraints = false
         return collection
     }()
+
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +39,8 @@ class CategoryListViewController: UIViewController {
         setupHierarchy()
         setupLayout()
     }
+
+    // MARK: - Setups
 
     private func setupHierarchy() {
         view.addSubview(categoryCollection)
@@ -62,13 +73,29 @@ class CategoryListViewController: UIViewController {
                 subitems: [item]
             )
 
+            let headerSize = NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1.0),
+                heightDimension: .absolute(45)
+            )
+            let header = NSCollectionLayoutBoundarySupplementaryItem(
+                layoutSize: headerSize,
+                elementKind: UICollectionView.elementKindSectionHeader,
+                alignment: .top
+            )
+            header.contentInsets.leading = 4
+            header.contentInsets.top = 4
+            header.contentInsets.bottom = 4
+
             let section = NSCollectionLayoutSection(group: group)
             section.contentInsets.leading = 8
             section.contentInsets.trailing = 8
+            section.boundarySupplementaryItems = [header]
             return section
         }
     }
 }
+
+// MARK: - UICollectionView Extension
 
 extension CategoryListViewController: UICollectionViewDataSource, UICollectionViewDelegate {
 
@@ -81,6 +108,11 @@ extension CategoryListViewController: UICollectionViewDataSource, UICollectionVi
         let category = CategoryModel.categories[indexPath.row]
         cell.setData(forCategory: category)
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CategoryCollectionHeader.identifier, for: indexPath) as? CategoryCollectionHeader else { return UICollectionReusableView() }
+        return header
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
