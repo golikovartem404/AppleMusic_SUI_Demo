@@ -48,21 +48,21 @@ class CategoryCollectionViewCell: UICollectionViewCell {
 
     private func setupLayout() {
         NSLayoutConstraint.activate([
-            imageView.widthAnchor.constraint(equalTo: contentView.widthAnchor),
-            imageView.heightAnchor.constraint(equalTo: contentView.heightAnchor),
-            imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+//            imageView.widthAnchor.constraint(equalTo: contentView.widthAnchor),
+//            imageView.heightAnchor.constraint(equalTo: contentView.heightAnchor),
+            imageView.topAnchor.constraint(equalTo: self.topAnchor),
+            imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
 
             title.widthAnchor.constraint(equalTo: imageView.widthAnchor),
             title.leadingAnchor.constraint(equalTo: imageView.leadingAnchor, constant: 10),
-            title.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 12)
+            title.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: -12)
         ])
     }
 
-    func setData(forModel model: CategoryModel) {
-        imageView.image = UIImage(named: model.categoryImage)
-        title.text = model.categoryTitle
+    func setData(forCategory category: CategoryModel) {
+        imageView.image = UIImage(named: category.categoryImage)
+        title.text = category.categoryTitle
     }
 }
