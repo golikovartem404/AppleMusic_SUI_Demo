@@ -58,15 +58,20 @@ class CategoryListViewController: UIViewController {
     private func setupCollectionLayout() -> UICollectionViewCompositionalLayout {
         return UICollectionViewCompositionalLayout() { sectionIndex, _ in
             let itemSize = NSCollectionLayoutSize(
-                widthDimension: .fractionalWidth(0.5),
-                heightDimension: .fractionalHeight(1.0)
+                widthDimension: .fractionalWidth(Constants.CollectionViewElementsSize.itemWidth),
+                heightDimension: .fractionalHeight(Constants.CollectionViewElementsSize.itemHeight)
             )
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
-            item.contentInsets = .init(top: 4, leading: 4, bottom: 4, trailing: 4)
+            item.contentInsets = .init(
+                top: Constants.Insets.collectionViewInset,
+                leading: Constants.Insets.collectionViewInset,
+                bottom: Constants.Insets.collectionViewInset,
+                trailing: Constants.Insets.collectionViewInset
+            )
 
             let groupSize = NSCollectionLayoutSize(
-                widthDimension: .fractionalWidth(1.0),
-                heightDimension: .fractionalWidth(0.35)
+                widthDimension: .fractionalWidth(Constants.CollectionViewElementsSize.groupWidth),
+                heightDimension: .fractionalWidth(Constants.CollectionViewElementsSize.groupHeight)
             )
             let group = NSCollectionLayoutGroup.horizontal(
                 layoutSize: groupSize,
@@ -74,21 +79,21 @@ class CategoryListViewController: UIViewController {
             )
 
             let headerSize = NSCollectionLayoutSize(
-                widthDimension: .fractionalWidth(1.0),
-                heightDimension: .absolute(45)
+                widthDimension: .fractionalWidth(Constants.CollectionViewElementsSize.headerWidth),
+                heightDimension: .absolute(Constants.CollectionViewElementsSize.headerHeight)
             )
             let header = NSCollectionLayoutBoundarySupplementaryItem(
                 layoutSize: headerSize,
                 elementKind: UICollectionView.elementKindSectionHeader,
                 alignment: .top
             )
-            header.contentInsets.leading = 4
-            header.contentInsets.top = 4
-            header.contentInsets.bottom = 4
+            header.contentInsets.leading = Constants.Insets.collectionViewInset
+            header.contentInsets.top = Constants.Insets.collectionViewInset
+            header.contentInsets.bottom = Constants.Insets.collectionViewInset
 
             let section = NSCollectionLayoutSection(group: group)
-            section.contentInsets.leading = 8
-            section.contentInsets.trailing = 8
+            section.contentInsets.leading = Constants.Insets.sectionInset
+            section.contentInsets.trailing = Constants.Insets.sectionInset
             section.boundarySupplementaryItems = [header]
             return section
         }

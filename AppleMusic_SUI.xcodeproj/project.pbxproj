@@ -111,7 +111,6 @@
 			children = (
 				9C03F3CB294A030500E34E38 /* CategoryListViewController.swift */,
 				9C03F3CD294A031400E34E38 /* CategoryCollectionViewCell.swift */,
-				9C03F3CF294A033B00E34E38 /* CategoryListView.swift */,
 				9C03F3D1294A080A00E34E38 /* CategoryCollectionHeader.swift */,
 			);
 			path = UIKitElements;
@@ -120,10 +119,9 @@
 		9C7E7F022943740400FF48A5 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				9C03F3CA294A02D700E34E38 /* UIKitElements */,
 				9C7E7F062943745000FF48A5 /* SearchView.swift */,
-				9C03F3D3294A0C7B00E34E38 /* DetailCategoryHostingController.swift */,
 				9CF6F09F2945C8F800C4663D /* SearchBarView.swift */,
+				9C03F3CA294A02D700E34E38 /* UIKitElements */,
 				9CF6F0962945C88F00C4663D /* SearchResultsView */,
 				9C7E7F1529437E6300FF48A5 /* DetailCategoryView */,
 				9C7E7F032943740F00FF48A5 /* CategoryView */,
@@ -134,6 +132,7 @@
 		9C7E7F032943740F00FF48A5 /* CategoryView */ = {
 			isa = PBXGroup;
 			children = (
+				9C03F3CF294A033B00E34E38 /* CategoryListView.swift */,
 				9C7E7F042943743400FF48A5 /* CategoryItemView.swift */,
 				9CF6F0A32945CCB200C4663D /* CategoriesView.swift */,
 			);
@@ -143,6 +142,7 @@
 		9C7E7F1529437E6300FF48A5 /* DetailCategoryView */ = {
 			isa = PBXGroup;
 			children = (
+				9C03F3D3294A0C7B00E34E38 /* DetailCategoryHostingController.swift */,
 				9C7E7F1829437E9600FF48A5 /* DetailCategoryView.swift */,
 				9C7E7F1729437E8600FF48A5 /* TracksListView */,
 				9C7E7F1629437E7700FF48A5 /* PlaylistsListView */,

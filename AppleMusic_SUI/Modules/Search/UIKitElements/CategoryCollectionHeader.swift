@@ -9,14 +9,14 @@ import UIKit
 
 class CategoryCollectionHeader: UICollectionReusableView {
 
-    static let identifier = "CategoryCollectionHeader"
+    static let identifier = Constants.Strings.Identifiers.headerIdentifier
 
     // MARK: - Outlets
 
     private lazy var headerTitle: UILabel = {
         let header = UILabel()
         header.translatesAutoresizingMaskIntoConstraints = false
-        header.text = "Search by categories"
+        header.text = Constants.Strings.SectionHeaders.categoryListHeader
         header.textAlignment = .left
         header.textColor = .black
         header.font = .systemFont(ofSize: 22, weight: .bold)

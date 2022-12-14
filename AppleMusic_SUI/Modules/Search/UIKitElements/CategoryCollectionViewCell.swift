@@ -11,7 +11,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Properties
 
-    static let identifier = "CotegoryCollectionViewCell"
+    static let identifier = Constants.Strings.Identifiers.categoryCellIdentifier
 
     // MARK: - Outlets
 
@@ -62,8 +62,8 @@ class CategoryCollectionViewCell: UICollectionViewCell {
             imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
 
             title.widthAnchor.constraint(equalTo: imageView.widthAnchor),
-            title.leadingAnchor.constraint(equalTo: imageView.leadingAnchor, constant: 10),
-            title.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: -12)
+            title.leadingAnchor.constraint(equalTo: imageView.leadingAnchor, constant: Constants.Constraints.cellTitleLeading),
+            title.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: Constants.Constraints.cellTitleBottom)
         ])
     }
 
